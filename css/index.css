@@ -1,9 +1,114 @@
 
 
 :root{
-    --background: #03312eff;
-    --opal: #9dc5bbff;
-    --primary-color: #17b890ff;
-    --evidence-color: #4f7cacff;
+    --background-1: #0C2652;
+    --background-2:#051839;
+    --opal: #D9D9D9;
+
+    --primary-color: #1bd3a5;
+    --evidence-color:#153F87;
     --tart-orange: #f0544fff;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    height: 100vh;
+    background-image: url(../images/peixe-bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center ;
+    
+    top: 0;
+    width: 100vw;
+}
+
+nav{
+    position: relative;
+}
+
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin:  0  50px;
+
+}
+
+.nav-item{
+    
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+
+.header-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-title h1{
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 3em;
+}
+
+.header-title p{
+    text-align: justify;
+    color: var(--opal);
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+
+.btn-action{
+    padding:10px 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--opal);
+    margin: 20px 0;
+    cursor: pointer;
+    transition-duration: .3s;
+    font-weight: bold;
+    font-size: .8em;
+}
+
+.btn-action:hover{
+    -webkit-box-shadow: -1px 0px 7px 1px #7aecc6; 
+    box-shadow: -1px 0px 7px 1px #3ac4a6;
+
+}
+
+.section-landing{
+    background: rgb(12,38,82);
+    background: radial-gradient(circle, rgba(12,38,82,1) 0%, rgba(5,24,57,1) 100%);
+    min-height: 100vh;
+}
+
+.section-landing h2{
+    margin: 0;
 }
