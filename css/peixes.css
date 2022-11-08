@@ -1,0 +1,162 @@
+
+:root{
+    --background-1: #0C2652;
+    --background-2:#051839;
+    --opal: #D9D9D9;
+
+    --primary-color: #1bd3a5;
+    --evidence-color:#153f878f;
+    --tart-orange: #f0544fff;
+}
+
+
+
+body{
+    background: rgb(12,38,82);
+    background: radial-gradient(circle, rgba(12,38,82,1) 0%, rgba(5,24,57,1) 100%);
+
+    height: 90vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+}
+
+h2{
+    color:var(--primary-color);
+    text-align: center;
+}
+
+#p-info{
+    color: #d9d9d97a;
+    z-index: 1;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.carrossel-peixes-container{
+    overflow-x: hidden;
+    overflow-y: visible;
+    
+    
+    width: 60vw;
+    height: 30vh;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.degrade-1{
+    background: rgb(12,38,82);
+    background: linear-gradient(90deg, rgba(12,38,82,1) 0%, rgba(12,38,82,0) 41%);
+    height: 25vh;
+    width: 10vw;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0,-52%);
+    /* border-radius: 10px 0 0 10px; */
+    z-index: 50;
+}
+.degrade-2{
+    background: rgb(12,38,82);
+    background: linear-gradient(-90deg, rgba(12,38,82,1) 0%, rgba(12,38,82,0) 41%);
+    height: 25vh;
+    width: 10vw;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-52%);
+    /* border-radius: 0 10px  10px 0; */
+    z-index: 50;
+
+}
+.peixes-container{
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    height: 30vh;
+}
+
+
+
+.img-carrossel{
+    height: 25vh;
+    transition-duration: .2s;
+}
+
+.peixe-card{
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+    
+}
+
+.peixe-card:hover .img-carrossel{
+    transform: scale(1.05);
+}
+
+.peixe-card:hover .info-peixe{
+    display: block;
+    animation: aparecer-info .3s ease-in-out ;
+
+}
+
+
+@keyframes aparecer-info {
+    0%{
+        height: 0;
+        color: transparent;
+      
+    }
+    80%{
+        color: transparent;
+    }
+    100%{
+        height: 100%;
+       
+        color: var(--opal);
+        
+    }
+}
+.info-peixe{
+    display: none;
+    position:fixed;
+    top: 60%;
+    margin: -3px;
+    width: 11.5vw;
+    background-color: #0d2a5daf;
+    color: var(--opal);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 60;
+
+}
+
+.botao-carrossel{
+    padding: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    z-index: 60;
+}
+
+#btn-prev{
+    position: absolute;
+}
+
+#btn-next{
+    position: absolute;
+    right: 0;
+}
+
+.icon-botao{
+    height: 10vh;
+}
