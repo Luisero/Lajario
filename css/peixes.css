@@ -32,6 +32,24 @@ h2{
     z-index: 1;
 }
 
+#link-voltar{
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+#btn-voltar{
+    cursor: pointer;
+    color: var(--primary-color);
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 20px 40px;
+    font-size: 1.5em;
+
+    display: flex;
+    align-items: center;
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -130,7 +148,7 @@ main{
 .info-peixe{
     display: none;
     position:fixed;
-    top: 60%;
+    top: 68%;
     margin: -3px;
     width: 11.5vw;
     background-color: #0d2a5daf;

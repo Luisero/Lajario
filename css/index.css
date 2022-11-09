@@ -34,6 +34,20 @@ nav{
     position: relative;
 }
 
+.fixed-navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: none;
+    background-color: var(--background-1);
+    border-radius: 0 0 10px 10px;
+    z-index: 100;
+}
+.fixed-navbar.ativa{
+    display: block;
+}
+
 .nav-list{
     list-style-type: none;
     display: flex;
@@ -49,6 +63,27 @@ nav{
     font-weight: bold;
     cursor: pointer;
     margin: 20px;
+    position: relative;
+    border: none;
+    transition: .5s ease-in-out;
+}
+
+.nav-item::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .2s ease-in-out;
+}
+
+.nav-item:hover::after{
+    
+    width: 100%;
+    
+
 }
 
 .nav-item:hover{
@@ -60,10 +95,14 @@ nav{
     color:var(--opal);
     text-decoration: none;
     transition-duration:.2s ;
+    border: none;
+    outline: none;
 }
+
 
 .nav-link:hover{
     color: white;
+
 }
 
 .header-title{
@@ -215,6 +254,10 @@ nav{
     color: var(--background-2);
     font-weight: bold;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .topico h3{
     text-align: center;
