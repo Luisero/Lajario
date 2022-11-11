@@ -7,13 +7,35 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
     <link rel="stylesheet" href="../css/calculadora.css">
+    <script src="../js/calculadora.js" defer></script>
 
     <title>Calculadora</title>
 </head>
 <body>
+    <nav>
+        <a href="../index.html" id="link-voltar"><button id="btn-voltar"> <span class="material-icons">arrow_back</span> Voltar</button></a>
+    </nav>
     <main>
         <section class="calculadora-section">
-                
+            <form action="" class="calculadora">
+                <h2>Calculadora</h2>
+                <div class="input-container" >
+                    <input type="number" class="float-input" id="input-largura">
+                    <label for="input-largura" class="float-label">Largura</label>
+                </div>
+                <div class="input-container">
+                    <input type="number" class="float-input" id="input-altura">
+                    <label for="input-altura" class="float-label">Altura</label>
+                </div>
+                <div class="input-container">
+                    <input type="number" class="float-input" id="input-comprimento">
+                    <label for="input-comprimento" class="float-label">Comprimento</label>
+                </div>
+
+                <div class="button-container">
+                    <input type="submit" value="Calcular" class="input-button">
+                </div>
+            </form>
         </section>
     </main>
 </body>

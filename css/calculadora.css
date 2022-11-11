@@ -13,4 +13,101 @@
 body{
     background: rgb(12,38,82);
     background: radial-gradient(circle, rgba(12,38,82,1) 0%, rgba(5,24,57,1) 100%);
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+#link-voltar{
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+#btn-voltar{
+    cursor: pointer;
+    color: var(--primary-color);
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 20px 40px;
+    font-size: 1.5em;
+
+    display: flex;
+    align-items: center;
+}
+.calculadora-section{
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculadora{
+    margin: 0 auto;
+    height: 60vh;
+    
+}
+.calculadora h2{
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.input-container{
+    margin: 2.5em auto;
+    position: relative;
+    display: flex;
+ 
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+.float-input{
+    background-color: var(--background-1);
+    outline: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    height: 2em;
+    width:15em;
+    color: var(--opal);
+}
+
+.float-label{
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: .4em;
+    top: 50%;
+    transform: translate(0,-50%);
+    transition-duration: .4s;
+}
+
+.float-input:focus+.float-label , .float-input.input-ativo + .float-label{
+    font-size: .8em;
+    top: -1.1em;
+}
+
+.input-button{
+    padding:10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--opal);
+
+    cursor: pointer;
+    transition-duration: .3s;
+    font-weight: bold;
+    font-size: .8em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.input-button:hover{
+    -webkit-box-shadow: -1px 0px 7px 1px #7aecc6; 
+    box-shadow: -1px 0px 7px 1px #3ac4a6;
+
 }
