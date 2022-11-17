@@ -65,7 +65,14 @@ main{
 
 .calculadora{
     margin: 0 auto;
-    height: 60vh;
+    height: 70vh;
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background: rgb(129, 145, 172);
+    background: radial-gradient(circle, #FBFBFB 0%, #ECECEC 100%);  
     
 }
 .calculadora h2{
@@ -84,13 +91,14 @@ main{
     justify-content: center;
 }
 .float-input{
-    background-color: var(--background-1);
+    background-color: transparent;
     outline: none;
-    border: 2px solid var(--primary-color);
-    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    
     height: 2em;
     width:15em;
-    color: var(--opal);
+    color: var(--background-1);
 }
 
 .float-label{

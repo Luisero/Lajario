@@ -21,19 +21,19 @@
                 <h2>Calculadora</h2>
                 <div class="input-container" >
                     <input required type="number" class="float-input" id="input-largura">
-                    <label for="input-largura" class="float-label">Largura</label>
+                    <label for="input-largura" class="float-label">Largura (cm)</label>
                 </div>
                 <div class="input-container">
                     <input required type="number" class="float-input" id="input-altura">
-                    <label for="input-altura" class="float-label">Altura</label>
+                    <label for="input-altura" class="float-label">Altura (cm)</label>
                 </div>
                 <div class="input-container">
                     <input required type="number" class="float-input" id="input-comprimento">
-                    <label for="input-comprimento" class="float-label">Comprimento</label>
+                    <label for="input-comprimento" class="float-label">Comprimento (cm)</label>
                 </div>
 
                 <div class="button-container">
-                    <input type="submit" value="Calcular" class="input-button">
+                    <input type="submit" value="Calcular" onclick="getInputsValue()" class="input-button">
                 </div>
             </form>
         </section>

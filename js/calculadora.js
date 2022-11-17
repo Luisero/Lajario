@@ -15,3 +15,22 @@ for (let i = 0; i < inputs.length; i++) {
     })
     
 }
+
+
+function getInputsValue()
+{
+    let largura = document.querySelector('#input-largura').value
+    let altura = document.querySelector('#input-altura').value;
+    let comprimento = document.querySelector('#input-comprimento').value;
+
+    const mililitrosEmUmLitro = 1000;
+
+    let litragem = largura * altura * comprimento / 1000;
+
+    alert(litragem)
+}
+
+function getAquariumVolume()
+{
+
+}
