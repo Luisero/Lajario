@@ -17,10 +17,10 @@
     </nav>
     <main>
         <section class="calculadora-section">
-            <form action="" class="calculadora">
+            <form  class="calculadora">
                 <h2>Calculadora</h2>
                 <div class="input-container" >
-                    <input required type="number" class="float-input" id="input-largura">
+                    <input autofocus required type="number" class="float-input" id="input-largura">
                     <label for="input-largura" class="float-label">Largura (cm)</label>
                 </div>
                 <div class="input-container">
@@ -33,10 +33,31 @@
                 </div>
 
                 <div class="button-container">
-                    <input type="submit" value="Calcular" onclick="getInputsValue()" class="input-button">
+                    <input type="button" value="Calcular" onclick="getInputsValue()" class="input-button">
                 </div>
             </form>
+
+            <div class="caixa-resultado">
+                <div class="res-value">
+                    <span class="material-icons">water</span>
+                    <p id="litragem-res"></p>
+                </div>
+                
+                <div class="res-value">
+                    <span class="material-icons">bolt</span>
+                    <p id="aquecedor-res"></p>
+                </div>
+
+                <div class="res-value">
+                    <span class="material-icons">heat_pump</span>
+                    <p id="bomba-res"></p>
+                </div>
+                
+            </div>
         </section>
+
+
+        
     </main>
 </body>
 </html>

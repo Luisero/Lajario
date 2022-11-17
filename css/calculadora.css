@@ -8,29 +8,17 @@
     --evidence-color:#153f878f;
     --tart-orange: #f0544fff;
 }
-:root{
-    --background-1: #0C2652;
-    --background-2:#051839;
-    --opal: #D9D9D9;
 
-    --primary-color: #1bd3a5;
-    --evidence-color:#153f878f;
-    --tart-orange: #f0544fff;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
-    overflow-x: hidden;
+html{
+    height: auto;
+    scroll-behavior: smooth;
 }
 
 
 body{
     background: rgb(12,38,82);
     background: radial-gradient(circle, rgba(12,38,82,1) 0%, rgba(5,24,57,1) 100%);
-    min-height: 100vh;
+    height: auto;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -57,7 +45,7 @@ main{
     align-items: center;
 }
 .calculadora-section{
-    margin: 100px auto;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,6 +72,7 @@ main{
     margin: 2.5em auto;
     position: relative;
     display: flex;
+    
  
 }
 .button-container{
@@ -97,7 +86,7 @@ main{
     border-bottom: 2px solid var(--primary-color);
     
     height: 2em;
-    width:15em;
+    width:auto;
     color: var(--background-1);
 }
 
@@ -137,4 +126,78 @@ main{
     -webkit-box-shadow: -1px 0px 7px 1px #7aecc6; 
     box-shadow: -1px 0px 7px 1px #3ac4a6;
 
+}
+
+@keyframes aparecer-caixa{
+    0%{
+        top: 50%;
+        opacity: 0;
+        scale: 1.4;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        top: 90%;
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+.caixa-resultado{
+    background: radial-gradient(circle, #FBFBFB 0%, #ECECEC 100%);  
+    animation:  aparecer-caixa .3s ease-in;
+    display: flex;
+    width: 25vw;
+    height: 20vh;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 93%;
+
+    display: none;
+    z-index: 100;
+}
+.caixa-resultado.ativa{
+    display: flex;
+}
+
+.res-value{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.res-value span{
+    color: var(--primary-color);
+    font-size: 2.5em;
+
+   
+}
+
+.res-value p{
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    width: 200%;
+}
+
+
+
+.produtos-section{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    display: none;
+    background: radial-gradient(circle, #FBFBFB 0%, #ECECEC 100%);  
+}
+
+.produtos-section.ativo{
+    display: block;
 }
