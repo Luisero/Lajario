@@ -39,11 +39,8 @@ function getInputsValue()
     document.querySelector('#aquecedor-res').innerText = `${potenciaAquecedor}  W`
     document.querySelector('#bomba-res').innerText = `${potenciaBomba} litros \n por hora`
     
-    caixaResultado.addEventListener('animationend',()=>{
-        window.scrollTo(0,200)
-
-        
-    })
+    let calculadora = document.querySelector('.calculadora')
+    calculadora.classList.toggle('ativa')
 
    
 }

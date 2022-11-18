@@ -10,7 +10,7 @@
 }
 
 html{
-    height: auto;
+    height: 100vh;
     scroll-behavior: smooth;
 }
 
@@ -55,14 +55,35 @@ main{
     margin: 0 auto;
     height: 70vh;
     width: 25vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     border-radius: 20px;
     background: rgb(129, 145, 172);
     background: radial-gradient(circle, #FBFBFB 0%, #ECECEC 100%);  
     
 }
+
+@keyframes mexer-calculadora{
+    from{
+       
+    }
+    to{
+        position: absolute;
+        left: 30%;
+    }
+}
+
+.calculadora.ativa{
+    animation: mexer-calculadora .3s ease-in;
+    animation-fill-mode: forwards;
+}
+
 .calculadora h2{
     text-align: center;
     color: var(--primary-color);
@@ -130,7 +151,7 @@ main{
 
 @keyframes aparecer-caixa{
     0%{
-        top: 50%;
+        top: 30%;
         opacity: 0;
         scale: 1.4;
     }
@@ -138,7 +159,7 @@ main{
         opacity: 0;
     }
     100%{
-        top: 90%;
+        top: 50%;
         opacity: 1;
         scale: 1;
     }
@@ -147,7 +168,7 @@ main{
 
 .caixa-resultado{
     background: radial-gradient(circle, #FBFBFB 0%, #ECECEC 100%);  
-    animation:  aparecer-caixa .3s ease-in;
+    animation:  aparecer-caixa .4s ease-in;
     display: flex;
     width: 25vw;
     height: 20vh;
@@ -156,7 +177,10 @@ main{
     border-radius: 20px;
 
     position: absolute;
-    top: 93%;
+    top: 50%;
+
+    left: 50%;
+    transform: translate(0,-50%);
 
     display: none;
     z-index: 100;
@@ -200,4 +224,16 @@ main{
 
 .produtos-section.ativo{
     display: block;
+}
+
+
+
+@media (min-width: 1550px){
+    .calculadora-section{
+        margin: 100px;
+    }
+    .calculadora{
+        top: 50%;
+        height: 55vh;
+    }
 }
