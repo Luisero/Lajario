@@ -9,6 +9,13 @@
     --tart-orange: #f0544fff;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+}
+
+
 html{
     height: 100vh;
     scroll-behavior: smooth;
